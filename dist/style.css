@@ -1,0 +1,79 @@
+.top-header {
+    height: 100px;
+    align-content: center;
+    
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.employee {
+    width: 250px;   
+    margin: 10px;
+    
+}
+.card-top {
+    background-color: blue;
+    color: rgb(180, 173, 173);
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card-bottom {
+    background-color: rgb(225, 219, 219);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   width: 100%;
+   border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.card-txt-name {
+    font-size: 22px;
+    color: white;
+}
+
+.card-txt-role {
+    font-size: 16px;
+    color: white;
+}
+
+.card-txt-1 {
+    margin: 0 12px 3px 12px;
+    background-color: white;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    
+
+}
+
+.card-txt-2 {
+    margin: 0 12px 0 12px;
+    background-color: white;
+    font-size: 11px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    
+
+}
