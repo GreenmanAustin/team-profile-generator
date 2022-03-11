@@ -1,3 +1,5 @@
+// This function inside the HTML; it generates the HTML for each employee type
+
 const generateEmployeeCards = employeeArr => {
     return `
     ${employeeArr
@@ -61,7 +63,7 @@ const generateEmployeeCards = employeeArr => {
 }
 
 
-
+// This is the function being exported; it received the array of employee objects and generates the HTML.
 module.exports = templateData => {
     return `
     <!DOCTYPE html>

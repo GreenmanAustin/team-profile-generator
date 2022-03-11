@@ -1,16 +1,21 @@
+// Adds packages for this application
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generatePage = require('./src/page-template');
 const { writeFile } = require('./utils/generate-site');
-const testing = require('./utils/testing');
 
-var done = 'false';
+// initializes the team array
 var team = [];
 
+// this is an array of objects of the different employee types
 const employeeObjs = [Manager, Engineer, Intern];
+
+// array of strings for each emplpyee type, which is used in the inquirer prompts below to reduce the amount of code
 const employeeTypes = ["team manager", 'engineer', 'intern'];
+
+// this is an array of questions for use in the inquirer questions below
 const uniqueQuestions = [
     "What is your team manager's office number?",
     "What is your engineer's GitHub Username?",
@@ -18,34 +23,15 @@ const uniqueQuestions = [
 ];
 
 
-// const optionMenu = () => {
-//     return inquirer
-//         .prompt({
-//             type: 'list',
-//             name: 'choice',
-//             message: 'What would you like to do next?',
-//             choices: ['Add an engineer', 'Add an intern', 'Finish team']
-//         })
-//         .then(({ choice }) => {
-//             switch (choice) {
-
-//                 case 'Add an engineer':
-//                     enterEmployees(1);
-//                     break;
-//                 case 'Add an intern':
-//                     enterEmployees(2);
-//                     break;
-//                 case 'Finish team':
-//                     break;
-//             }
-
-//         })
-// };
-
+// this is the main function which takes an argument the index of the employeeTypes array and uses that to produce user prompts for the specified employee type
 const enterEmployees = (no) => {
+
+    // this is the console log show before entering every employee after the Manager
     if (no !== 0) {
         console.log('\n====================================\nEntering Employee Information\n====================================\n ');
     };
+
+    // these are the user prompts, which vary based on the employee type specifed by the argument to this function
     return inquirer
         .prompt([
             {
@@ -112,6 +98,7 @@ const enterEmployees = (no) => {
                 message: 'What would you like to do next?',
                 choices: ['Add an engineer', 'Add an intern', 'Finish team']
             })
+                // Based on the user's input above, the enterEmployee function is either called again, with the index of the employee type the user wants to enter being, or the function ends
                 .then(({ choice }) => {
                     switch (choice) {
 
@@ -132,10 +119,15 @@ const enterEmployees = (no) => {
 };
 
 
+
+// this calls the function with the index number for the manager type
 enterEmployees(0)
+    // the array of objects generated from the user prompts is passed to generatePage to produce the HTML
     .then(pageData => {
         return generatePage(pageData)
     })
+
+    // the HTML page from the prior function is passed to writeFile to be saved as index.html inside the "dist" folder
     .then(pageHTML => {
         return writeFile(pageHTML);
     });

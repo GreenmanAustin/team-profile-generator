@@ -20,7 +20,7 @@
 
   ## Usage
 
-  Type "Node index.js" in the terminal when in the same directory as that file.  The follow the prompts to answer questions about your project. After you are done, the application will generate a index.html file in the "dist" folder, which is located in the root directory.  Open that file in a brower to see the results of the application.  View walk through video here - 
+  Type "Node index.js" in the terminal when in the same directory as that file.  The follow the prompts to answer questions about your project. After you are done, the application will generate a index.html file in the "dist" folder, which is located in the root directory.  Open that file in a brower to see the results of the application.  View walk through video here - <a href="https://drive.google.com/file/d/1-nJ3OfFyqdNksvq3Jh9mKtYtkpZh8817/view?usp=sharing">Screencastify</a>
 
 ![Appearance and Functionality](./assets/site_appearance.png)
 
