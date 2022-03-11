@@ -76,7 +76,7 @@ module.exports = templateData => {
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header class="bg-danger text-white top-header">
+        <header class="text-white top-header">
         <h1 class="text-md-center title">My Team</h1>
     </header>
     <main class="main">

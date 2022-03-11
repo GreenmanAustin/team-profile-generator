@@ -43,6 +43,9 @@ const uniqueQuestions = [
 // };
 
 const enterEmployees = (no) => {
+    if (no !== 0) {
+        console.log('\n====================================\nEntering Employee Information\n====================================\n ');
+    };
     return inquirer
         .prompt([
             {
@@ -101,6 +104,7 @@ const enterEmployees = (no) => {
             }
         ]).then(({ name, employeeId, email, uniqueQuestion }) => {
             var newEmployee = new employeeObjs[no](name, employeeId, email, uniqueQuestion);
+            console.log('\n', newEmployee, '\n');
             team.push(newEmployee);
             return inquirer.prompt({
                 type: 'list',

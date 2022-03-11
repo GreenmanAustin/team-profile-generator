@@ -1,6 +1,7 @@
 .top-header {
     height: 100px;
     align-content: center;
+    background-color: rgb(52, 52, 77);
     
     text-align: center;
 }
@@ -28,7 +29,7 @@
     
 }
 .card-top {
-    background-color: blue;
+    background-color: rgb(52, 52, 77);
     color: rgb(180, 173, 173);
     padding: 10px;
     border-top-right-radius: 10px;
