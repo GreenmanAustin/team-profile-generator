@@ -84,5 +84,7 @@ module.exports = templateData => {
     <main class="main">
         ${generateEmployeeCards(templateData)}
     </main>
+    </body>
+  </html>
 `
 }
